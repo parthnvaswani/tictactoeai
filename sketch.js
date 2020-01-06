@@ -114,14 +114,14 @@ let board = [
       let resultP = createP('');
       resultP.style('font-size', '32pt');
       if (result == 'tie') {
-        resultP.html('Tie! left on board to play again');
+        resultP.html('Tie!');
       } else {
-        resultP.html(`${result} wins! click on board to play again`);
+        resultP.html(`${result} wins!`);
       }
     }
     if (result != null) {
         if(mousePressed){
-            let but=createButton("play again");
+            let but=createButton("play again").attribute("style","padding:5px;font-size:20px;color:blue;background-color:grey;");
             but.mousePressed(playag);
         }
     }
